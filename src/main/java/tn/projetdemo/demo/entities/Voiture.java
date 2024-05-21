@@ -10,7 +10,6 @@ import java.util.List;
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
 @FieldDefaults(level= AccessLevel.PRIVATE)
 @Entity
 public class Voiture {
@@ -27,7 +26,9 @@ private String numDeChoussi;
 
 
 
-
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "qr_id", referencedColumnName = "idQr")
+	private QR qr;
 
 
 @JsonIgnore
@@ -43,4 +44,8 @@ private String numDeChoussi;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="commande")
 	private Commande commande;
+
+	public Voiture() {
+		this.qr = new QR();
+	}
 }

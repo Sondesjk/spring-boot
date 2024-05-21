@@ -23,6 +23,9 @@ public class QR {
 	private String size;
 
 
+	public void setImage(byte[] qrCodeImage) {
+	}
 
-
+	public void setContent(String s) {
+	}
 }

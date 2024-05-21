@@ -9,8 +9,7 @@ import java.util.List;
 public interface VoitureServiceInter {
 
 
-    Voiture addVoiture(Voiture voiture);
-
+    public Voiture saveVoiture(Voiture voiture);
     void deleteVoiture(Long id);
 
     Voiture updateVoiture(Long id, Voiture voiture);
