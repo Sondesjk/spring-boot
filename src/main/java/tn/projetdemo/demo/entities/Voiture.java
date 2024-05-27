@@ -17,13 +17,13 @@ public class Voiture {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY )
-private Long id;
-private String marque;
-	private String modele;
-private int annee;
-private int prix;
-private String matricule;
-private String numDeChoussi;
+		private Long id;
+		private String marque;
+		private String modele;
+		private String annee;
+		private float prix;
+		private String matricule;
+		private String numDeChoussi;
 
 
 

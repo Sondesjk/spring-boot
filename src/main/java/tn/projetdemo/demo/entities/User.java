@@ -31,14 +31,14 @@ public class User {
 
 	@ManyToMany
 	@JoinTable(name="userrole",joinColumns = @JoinColumn(name="id"), inverseJoinColumns = @JoinColumn(name="idrole"))
-@JsonIgnore
+	@JsonIgnore
 	private Set<Role> role  = new HashSet<>();
 
 
 	@JsonIgnore
 
 	@OneToMany(mappedBy ="user",cascade = CascadeType.ALL)
-private Set<Post> posts= new HashSet<>();
+	private Set<Post> posts= new HashSet<>();
 
 
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
